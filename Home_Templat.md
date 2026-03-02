@@ -251,7 +251,6 @@ Die folgenden Technologien und Tools wurden im Projekt eingesetzt:
 * UI Theming (Material UI)
 * Metriken zur Adoption
 * Self-Hosted Production Setup
-* CBA Exam Vorbereitung
 
 ---
 
@@ -3143,6 +3142,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
