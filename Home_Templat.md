@@ -1856,8 +1856,6 @@ Ich füge den Keycloak Identity Provider zu meinem bestehenden Docker-Compose-St
 <img width="975" height="668" alt="image" src="https://github.com/user-attachments/assets/1c1d61b2-209f-449e-90de-1fa3c089ff46" />
 
 
-<img width="843" height="631" alt="image" src="https://github.com/user-attachments/assets/5dbee3cb-727e-40f0-802d-47a198017c71" />
-
 ---
 
 ## 2️⃣ Backstage Realm und OIDC-Client konfigurieren
@@ -1902,7 +1900,7 @@ cd /root/labs/developer-portal
 docker compose ps
 ````
 
-Du solltest folgende Container sehen:
+# Ergebnisse
 
 * `backstage-app`
 * `postgres-backstage`
@@ -1915,7 +1913,7 @@ Du solltest folgende Container sehen:
 
 ## Schritt 2: Docker Secrets überprüfen
 
-Im Lab sind bereits vorkonfigurierte Docker-Secrets im Verzeichnis `secrets/` vorhanden.
+
 
 Prüfe den Inhalt:
 
@@ -3145,6 +3143,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
