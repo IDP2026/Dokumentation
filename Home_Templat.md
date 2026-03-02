@@ -121,7 +121,7 @@ Die folgenden Technologien und Tools wurden im Projekt eingesetzt:
 ---
 
 
- **Architektur-Roadmap-Darstellung** deiner *Internal Developer Platform (Platform Engineering Initiative)* :
+ **Architektur-Roadmap-Darstellung** :
 
 1. **Zielarchitektur (Production Architecture Overview)**
 2. **Technische Integrationsarchitektur**
@@ -342,7 +342,7 @@ Backstage läuft als Deployment **im Kubernetes-Cluster**.
 
 ---
 
-# 🔄 End-to-End Workflow (Dein echtes Setup)
+# 🔄 End-to-End Workflow
 
 ### 1️⃣ Login
 
@@ -384,7 +384,7 @@ Backstage zeigt:
 
 ---
 
-# 🔐 Sicherheitsmodell (Dein Projekt-spezifisch)
+# 🔐 Sicherheitsmodell 
 
 * OIDC via Keycloak
 * RBAC via Kubernetes Roles
@@ -485,7 +485,7 @@ ArgoCD synchronisiert Git → Cluster.
 
 ---
 
-# 🔄 Dein echter End-to-End Flow
+# 🔄 Echter End-to-End Flow
 
 ### 1️⃣ Login
 
@@ -930,15 +930,13 @@ cat template.yaml
 
 ## Ziel
 
-Du sollst eine Datei erstellen:
+Datei erstellen:
 
 `/root/labs/developer-portal/templates/nodejs-service-template/docs/README.md`
 
-mit dem Inhalt, den dein Lehrer gegeben hat.
-
 ---
 
-## 1) Prüfen, dass du im richtigen Ordner bist
+## 1) Prüfen, ob man im richtigen Ordner sei
 
 ```bash
 pwd
@@ -1204,8 +1202,6 @@ Backstage-Template-Parameter verwenden JSON Schema zur Definition der Formularfe
 ---
 
 ### Schritt 1: Erstellen grundlegender Felder für Projektinformationen
-
-Aktualisiere dein Template, um Benutzer-Eingabeparameter hinzuzufügen. Öffne im Reiter „Code Editor“ die Datei `nodejs-service-template/template.yaml` und füge den Parameterbereich nach den Metadaten hinzu.
 
 ```
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -1855,7 +1851,7 @@ Nach diesem Abschnitt lerne ich :
 
 ## 1️⃣ Keycloak zu Docker Compose hinzufügen
 
-Ich füge den Keycloak Identity Provider zu deinem bestehenden Docker-Compose-Stack hinzu – gemeinsam mit Backstage.
+Ich füge den Keycloak Identity Provider zu meinem bestehenden Docker-Compose-Stack hinzu – gemeinsam mit Backstage.
 
 
 <img width="975" height="668" alt="image" src="https://github.com/user-attachments/assets/1c1d61b2-209f-449e-90de-1fa3c089ff46" />
@@ -2175,7 +2171,7 @@ cat secrets/keycloak_admin_password.txt
 
 ---
 
-✅ Hier habe ich  Keycloak erfolgreich mit sicherem Credential-Management in deinen Docker-Compose-Stack integriert.
+✅ Hier habe ich  Keycloak erfolgreich mit sicherem Credential-Management in meinen Docker-Compose-Stack integriert.
 
 Im nächsten Schritt konfiguriere ich einen **Backstage-Realm** und einen **OIDC-Client**.
 
@@ -2363,7 +2359,7 @@ Auf **meinem Laptop/PC** (nicht im Server-Terminal) ausführen:
 ssh -L 8080:localhost:8080 root@95.217.210.206
 ```
 
-Dann im Browser auf deinem Laptop:
+Dann im Browser :
 
 * **Keycloak Admin:** `http://localhost:8080/admin/`
 
@@ -2874,12 +2870,8 @@ cat /opt/tekanaid/keycloak_url.txt
 
 ## 6.1 Keycloak Admin Console öffnen
 
-Öffne deine Keycloak-URL aus `/opt/tekanaid/keycloak_url.txt` im Browser und gehe in die Admin Console (meist `/admin`).
-
-Login:
-
 * Username: `admin`
-* Password: (deins aus `cat secrets/keycloak_admin_password.txt`)
+* Password: (meins aus `cat secrets/keycloak_admin_password.txt`)
 
 * **Username:** `admin`
 * **Password:** `keycloak-admin-1234`
@@ -2891,8 +2883,6 @@ Login:
 In Keycloak:
 
 * **Clients** → wähle den Client **`backstage`**
-
-  * (Falls der Client noch nicht existiert: **Create client** und als **Client type = OpenID Connect**; Name/Client ID = `backstage` – genau wie dein Lab es vorgibt.)
 
 ## 6.3 Redirect/URL-Felder setzen (exakt wie Step 6)
 
@@ -2956,8 +2946,6 @@ Dann **Save**.
 
 ## A) OIDC Discovery Endpoint prüfen (Keycloak)
 
-Nimm deine Keycloak Public URL aus `/opt/tekanaid/keycloak_url.txt` und deinen Realm (im Lab meist `backstage` – falls du anders heißt, entsprechend anpassen).
-
 Beispiel:
 
 ```bash
@@ -2966,48 +2954,9 @@ REALM="backstage"
 curl -s "$KEYCLOAK_URL/realms/$REALM/.well-known/openid-configuration" | head
 ```
 
-Wenn du JSON siehst (issuer, authorization_endpoint, token_endpoint), passt es.
-
-## B) Redirect URIs grob checken
-
-Wenn Login später fehlschlägt, ist zu 90%:
-
-* falsche Public URL (localhost statt tekanaid URL)
-* Redirect URI fehlt `/api/auth/oidc/handler/frame`
-* Web origins nicht gesetzt
-
 ---
 
-# Was kommt danach (damit du nicht hängen bleibst)
-
-Der nächste Task ist typischerweise: **Backstage OIDC Provider konfigurieren** (`app-config.yaml`) + **Sign-in Resolver** (Groups aus Token extrahieren).
-
-Wenn du mir sagst:
-
-1. **Wie heißt dein Realm?** (z. B. `backstage`)
-2. Ausgabe von:
-
-```bash
-cat /opt/tekanaid/backstage_url.txt
-cat /opt/tekanaid/keycloak_url.txt
-```
-
-(darfst du anonymisieren, aber Domain-Form muss erkennbar sein)
-
-… dann gebe ich dir **die exakte `app-config.yaml` OIDC-Konfiguration** für Backstage inkl. Resolver für `groups`.
-
-
-
-Perfekt — das sind genau die **Public URLs**, die du für Step 6 brauchst:
-
-* **Backstage URL:** `https://backstage-app-patrickaboudou-yahoo-fr-backstage-keycloak.academy.tekanaid.com`
-* **Keycloak URL:** `https://keycloak-patrickaboudou-yahoo-fr-backstage-keycloak.academy.tekanaid.com`
-
-(Und ja: das `^[[200~...` ist nur Copy/Paste-Müll. Ignorieren oder einmal `reset` ausführen.)
-
----
-
-# Step 6: Redirect URIs im Keycloak Client setzen (exakt mit deinen URLs)
+# Step 6: Redirect URIs im Keycloak Client setzen (exakt mit meinen URLs)
 
 ## 1) Keycloak Admin Console öffnen
 
@@ -3089,7 +3038,6 @@ Dann diese Einstellungen:
 
 
 ## Mini-Check
-Wenn dein Realm z. B. `backstage` heißt, teste den Discovery Endpoint:
 
 ```bash
 KEYCLOAK_URL="$(cat /opt/tekanaid/keycloak_url.txt)"
@@ -3201,6 +3149,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
