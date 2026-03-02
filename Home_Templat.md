@@ -710,7 +710,6 @@ Man kann sich Templates als „Baupläne“ oder „Cookiecutter“-Werkzeuge vo
 ```bash
 cd /root/labs/developer-portal
 ```
-<img width="1591" height="503" alt="image" src="https://github.com/user-attachments/assets/af28e554-6025-4d65-ac56-9f5cbf72b8f4" />
 
 
 ## Erstellen Sie ein Templates-Verzeichnis:
@@ -728,7 +727,7 @@ cd templates/nodejs-service-template
 <img width="912" height="753" alt="image" src="https://github.com/user-attachments/assets/47107061-fa25-4feb-8077-f6e2b6f80a29" />
 
 
-Erstellen Sie Verzeichnisse für die Template-Komponenten:
+Template-Komponenten:
 
 ```bash
 mkdir -p skeleton docs
@@ -1018,9 +1017,6 @@ Wenn `cat` den Text ausgibt, ist alles korrekt.
 
 ---
 
-## Alternative (schneller, ohne Editor)
-
-Wenn du lieber **ohne nano** direkt erstellen willst, nutze das hier:
 
 ```bash
 cat > docs/README.md <<'EOF'
@@ -1072,7 +1068,7 @@ EOF
 <img width="887" height="1075" alt="image" src="https://github.com/user-attachments/assets/698b95ca-70b5-42a8-91ef-e6a0ef4f3119" />
 
 
-Danach prüfen:
+Prüfen:
 
 ```bash
 cat docs/README.md
@@ -1094,7 +1090,8 @@ cat docs/README.md
 
 ## Schritt 4: Template-Dokumentation hinzufügen
 
-Erstellen Sie eine Dokumentation für die Template-Nutzer. Erstellen Sie im Code-Editor-Tab eine README-Datei im `docs`-Verzeichnis:
+Erstellen Sie eine Dokumentation für die Template-Nutzer. 
+Erstellen Sie im Code-Editor-Tab eine README-Datei im `docs`-Verzeichnis:
 
 ```md
 # Node.js Microservice Template
@@ -1169,35 +1166,15 @@ Die Eigentümerschaft von Templates ist entscheidend für die Wartung:
 * **Weiterentwicklung**: Neue Funktionen basierend auf Nutzerfeedback
 * **Ablösung**: Wird schließlich durch bessere Ansätze ersetzt
 
-Im nächsten Schritt erstellen Sie das Benutzereingabeformular (Parameter-Sektion), mit dem Informationen von Entwicklern gesammelt werden, um das generierte Projekt zu individualisieren.
-
-Sie haben erfolgreich Template-Metadaten definiert, die Ihr Template auffindbar machen und seinen Zweck klar kommunizieren. Diese Grundlage stellt sicher, dass Entwickler Ihr Template finden und verstehen, bevor sie es verwenden.
+Im nächsten Schritt erstelle ich das Benutzereingabeformular
 
 ---
 
 # **Erstellen des Benutzer-Eingabeformulars**
 
 **Erstellen des Benutzer-Eingabeformulars**
+
 In dieser Aufgabe wird der Abschnitt „Parameter“ des Software-Templates erstellt, der das Formular definiert, das Entwickler ausfüllen, wenn sie das Template verwenden. Dieses Formular sammelt die Informationen, die benötigt werden, um das generierte Projekt an die spezifischen Bedürfnisse der Entwickler anzupassen.
-
-### Warum benötigen Templates Benutzer-Eingabeformulare?
-
----
-
-### Verständnis der Parameterstruktur
-
-#### Schritt 1: Erstellen von Feldern für grundlegende Projektinformationen
-
-#### Schritt 2: Hinzufügen von Repository- und Integrations-Einstellungen
-
-#### Schritt 3: Hinzufügen von technischen Konfigurationsoptionen
-
-
----
-
-### Erstellen des Benutzer-Eingabeformulars
-
-In dieser Aufgabe erstellst du den Parameterbereich deines Software-Templates. Dieser definiert das Formular, das Entwickler ausfüllen, wenn sie dein Template verwenden. Das Formular sammelt die Informationen, die benötigt werden, um das generierte Projekt an die jeweiligen Anforderungen anzupassen.
 
 ---
 
@@ -1229,10 +1206,6 @@ Backstage-Template-Parameter verwenden JSON Schema zur Definition der Formularfe
 ### Schritt 1: Erstellen grundlegender Felder für Projektinformationen
 
 Aktualisiere dein Template, um Benutzer-Eingabeparameter hinzuzufügen. Öffne im Reiter „Code Editor“ die Datei `nodejs-service-template/template.yaml` und füge den Parameterbereich nach den Metadaten hinzu.
-
----
-
-Aktualisiere dein Template, um Benutzer-Eingabeparameter hinzuzufügen. Öffne im Reiter „Code Editor“ die Datei `nodejs-service-template/template.yaml` und füge den Parameterbereich nach den Metadaten hinzu:
 
 ```
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -1378,9 +1351,7 @@ cd /root/labs/developer-portal/templates/nodejs-service-template
 nano template.yaml
 ```
 
-## Schritt 2: `parameters:` komplett ersetzen (Step 1 + Step 2 zusammen)
-
-Suche in `spec:` den Block `parameters:` und ersetze ihn **komplett** durch diesen korrekten Block:
+## Schritt 2: `parameters:` komplett ersetzen
 
 ```yaml
   parameters:
@@ -1479,17 +1450,7 @@ Suche in `spec:` den Block `parameters:` und ersetze ihn **komplett** durch dies
           ui:help: 'PostgreSQL is recommended for most applications. Choose "none" for stateless services.'
 ```
 
-**Wichtig zur Einrückung:**
-
-* `parameters:` hat **2 Leerzeichen** voran (weil es unter `spec:` steht).
-* Jede Sektion beginnt mit `- title: ...` (auch 4 Leerzeichen vor `-`).
-
-## Schritt 3: Speichern
-
-Nano:
-
-* **CTRL + O**, Enter
-* **CTRL + X**
+# Ergebnisse:
 
 <img width="1110" height="1067" alt="image" src="https://github.com/user-attachments/assets/d9b3cff9-34ed-42ce-8aeb-5641b1b92d3b" />
 
@@ -1501,7 +1462,7 @@ Nano:
 <img width="1127" height="1020" alt="image" src="https://github.com/user-attachments/assets/48042cde-e4d0-46b3-afdb-f55528b40885" />
 
 
-## Schritt 4: YAML prüfen (muss OK sein)
+## Schritt 4: YAML prüfen
 
 ```bash
 python3 - <<'PY'
@@ -1550,13 +1511,6 @@ PY
 host: 0.0.0.0
 ```
 
-👉 `0.0.0.0` = akzeptiert Verbindungen von außen
-👉 `127.0.0.1` = nur lokal
-
----
-
-
-
 ```yaml
 origin: http://localhost:3000
 ```
@@ -1587,23 +1541,6 @@ backend:
 
 ---
 
-#  **Danach neu starten**
-
-Im Projektordner:
-
-```bash
-CTRL + C   # falls läuft stoppen
-yarn dev
-```
-
-oder
-
-```bash
-yarn start
-```
-
----
-
 #  **im Browser öffnen**
 
 ```
@@ -1627,9 +1564,11 @@ http://95.217.214.89:3000
 
 # **Anleitung: Rundgang durch die Projektstruktur**
 
-Bei laufendem **Backstage** erkunden wir die Projektstruktur, um zu verstehen, wie eine **Backstage**-Anwendung organisiert ist. Dieses Wissen ist für die Anpassung und Erweiterung Ihres Portals unerlässlich.
+Bei laufendem **Backstage** erkunden wir die Projektstruktur, um zu verstehen, wie eine **Backstage**-Anwendung organisiert ist. 
+Dieses Wissen ist für die Anpassung und Erweiterung Ihres Portals unerlässlich.
 
 ## **Schritt 1: Root-Projektstruktur erkunden**
+
 Beginnen Sie mit der Untersuchung der Hauptprojektverzeichnisse:
 
 ```bash
@@ -1648,6 +1587,7 @@ Die wichtigsten Komponenten sind:
 Dies folgt dem standardmäßigen **Backstage**-Projektaufbau, was es für andere **Backstage**-Entwickler vertraut macht.
 
 ## **Schritt 2: Die Monorepo-Architektur entdecken**
+
 Listen Sie das `packages`-Verzeichnis auf, um die Code-Organisation zu verstehen:
 
 ```bash
@@ -1662,8 +1602,6 @@ ls -la /root/labs/developer-portal/packages/
 
 
 <img width="1058" height="828" alt="image" src="https://github.com/user-attachments/assets/1efde67e-4171-40ad-929c-f61c70a6d621" />
-
-
 
 
 <img width="1005" height="878" alt="image" src="https://github.com/user-attachments/assets/d65939a7-661d-409e-81ea-2fb6ad790c73" />
@@ -1681,7 +1619,8 @@ ls -la /root/labs/developer-portal/packages/
 Diese Monorepo-Struktur ermöglicht es Teams, Frontend und Backend unabhängig voneinander zu entwickeln und dennoch synchron zu halten.
 
 ## **Schritt 3: Struktur der Frontend-Anwendung untersuchen**
-Erkunden Sie, aus welchen Teilen die Benutzeroberfläche besteht:
+
+
 
 ```bash
 ls -la /root/labs/developer-portal/packages/app/src/
@@ -1695,10 +1634,11 @@ Das Frontend umfasst:
 - **`components/`**: Benutzerdefinierte **UI**-Komponenten für Ihre spezifischen Anforderungen
 - **`App.test.tsx`**: Automatisierte Tests zur Qualitätssicherung
 
-Das Verständnis dieser Struktur hilft Ihnen zu wissen, wo Sie benutzerdefinierte Seiten und Komponenten hinzufügen können.
+Das Verständnis dieser Struktur hilft uns zu wissen, wo wir benutzerdefinierte Seiten und Komponenten hinzufügen können.
 
 ## **Schritt 4: Aufbau des Backend-Dienstes untersuchen**
-Sehen Sie, wie der **API**-Dienst strukturiert ist:
+
+Sehen wir, wie der **API**-Dienst strukturiert ist:
 
 ```bash
 ls -la /root/labs/developer-portal/packages/backend/src/
@@ -1712,16 +1652,17 @@ Das Backend enthält:
 - **`plugins/`**: Konfiguration für verschiedene **Backstage**-Plugins
 - **`types.ts`**: **TypeScript**-Definitionen für benutzerdefinierte Datenstrukturen
 
-Diese Organisation macht deutlich, wo neue **API**-Endpunkte und Integrationen hinzugefügt werden können.
+
 
 ## **Schritt 5: Kernkonfigurationsdateien prüfen**
-Betrachten Sie die Hauptkonfigurationsdatei, um zu verstehen, wie **Backstage** konfiguriert ist:
+
+Betrachten wir die Hauptkonfigurationsdatei, um zu verstehen, wie **Backstage** konfiguriert ist:
 
 ```bash
 cat /root/labs/developer-portal/app-config.yaml
 ```
 
-Diese Datei steuert alle Aspekte Ihrer **Backstage**-Instanz, einschließlich Datenbank, Authentifizierung und Integrationen.
+Diese Datei steuert alle Aspekte unserer **Backstage**-Instanz, einschließlich Datenbank, Authentifizierung und Integrationen.
 
 ```yaml
 app:
@@ -1839,7 +1780,7 @@ permission:
   enabled: true
 ```
 
-Untersuchen Sie auch die Katalog-Metadaten für die **Backstage**-App selbst:
+Untersuchen wir auch die Katalog-Metadaten für die **Backstage**-App selbst:
 
 ```bash
 cat /root/labs/developer-portal/catalog-info.yaml
@@ -1877,22 +1818,21 @@ spec:
 
 
 
-========================================================================
+===============================================
 
----
+-----------------------------------------
 # Keycloak Integration
----
+-----------------------------------------
 
 ## 📘 Über dieses Lab
 
-In diesem Lab implementierst du eine produktionsreife Authentifizierung mit **Keycloak** als OpenID Connect (OIDC) Provider.  
-Du konfigurierst Realms und Clients, richtest Benutzerverwaltung ein, integrierst die Authentifizierung in Backstage und testest vollständige Login-Workflows.
+In diesem Abschnitt  möchte ich eine produktionsreife Authentifizierung mit **Keycloak** als OpenID Connect (OIDC) Provider implementieren.  
 
 ---
 
 ## 🎯 Lernziele
 
-Nach diesem Lab kannst du:
+Nach diesem Abschnitt lerne ich :
 
 - Keycloak mit Docker produktionsnah deployen
 - Realms, Clients und OIDC-Einstellungen für die Backstage-Integration konfigurieren
@@ -1901,8 +1841,6 @@ Nach diesem Lab kannst du:
 - Sicherheits-Best-Practices für Authentifizierung anwenden
 - Benutzergruppen und Rollen-Mappings für Berechtigungen konfigurieren
 - Keycloak-Benutzer und -Gruppen mit dem Backstage-Katalog synchronisieren
-
-Dieses Hands-on-Lab etabliert eine **Enterprise-Grade-Authentifizierung** für dein Developer Portal.
 
 ---
 
@@ -1913,14 +1851,11 @@ Dieses Hands-on-Lab etabliert eine **Enterprise-Grade-Authentifizierung** für d
 - Keycloak Dokumentation  
 
 ---
-
-# 🧩 Was du lernen wirst (6 Aufgaben)
-
 ---
 
 ## 1️⃣ Keycloak zu Docker Compose hinzufügen
 
-Füge den Keycloak Identity Provider zu deinem bestehenden Docker-Compose-Stack hinzu – gemeinsam mit Backstage.
+Ich füge den Keycloak Identity Provider zu deinem bestehenden Docker-Compose-Stack hinzu – gemeinsam mit Backstage.
 
 
 <img width="975" height="668" alt="image" src="https://github.com/user-attachments/assets/1c1d61b2-209f-449e-90de-1fa3c089ff46" />
@@ -1928,14 +1863,11 @@ Füge den Keycloak Identity Provider zu deinem bestehenden Docker-Compose-Stack 
 
 <img width="843" height="631" alt="image" src="https://github.com/user-attachments/assets/5dbee3cb-727e-40f0-802d-47a198017c71" />
 
-
-
-
 ---
 
 ## 2️⃣ Backstage Realm und OIDC-Client konfigurieren
 
-Erstelle einen dedizierten Realm für Backstage und konfiguriere den passenden OIDC-Client in Keycloak.
+Ich erstelle einen dedizierten Realm für Backstage und konfiguriere den passenden OIDC-Client in Keycloak.
 
 ---
 
@@ -1948,7 +1880,6 @@ Konfiguriere das Backstage-Backend so, dass Benutzer über Keycloak mittels OIDC
 ## 4️⃣ Backstage Frontend für OIDC konfigurieren
 
 Richte das Backstage-Frontend so ein, dass die Keycloak-Anmeldeoption über OIDC angezeigt wird.
-
 ---
 
 ## 5️⃣ Authentifizierung testen und Benutzer erstellen
@@ -1985,13 +1916,6 @@ Du solltest folgende Container sehen:
 
 <img width="1337" height="379" alt="image" src="https://github.com/user-attachments/assets/bd77fe9e-f5c6-4db6-9371-0af235cf8d7a" />
 
-
-
-
-
-
-Beide sollten den Status **running** (bzw. `healthy` für Postgres) anzeigen.
-
 ---
 
 ## Schritt 2: Docker Secrets überprüfen
@@ -2004,15 +1928,12 @@ Prüfe den Inhalt:
 ls -la secrets/
 ```
 
-Du solltest folgende Dateien sehen:
+Hier sollten folgende Dateien gesehen werden :
 
 * `postgres_password.txt` – PostgreSQL-Datenbankpasswort (wird über Docker Secrets verwendet)
 * `keycloak_admin_password.txt` – Keycloak-Administratorpasswort (wird per Bind-Mount eingebunden)
 
 <img width="1340" height="318" alt="image" src="https://github.com/user-attachments/assets/c4782829-4e34-4af9-95c8-0dc9b0dcf115" />
-
-
-
 
 ### 🔐 Sicherheitskonzept
 
@@ -2034,7 +1955,7 @@ Das ist deutlich sicherer als das Hinterlegen von Passwörtern als Umgebungsvari
 /root/labs/developer-portal/docker-compose.yml
 ```
 
-Ersetze den gesamten Inhalt mit folgender Konfiguration:
+Den den gesamten Inhalt mit folgender Konfiguration wurde ersetzt:
 
 ```yaml
 services:
@@ -2131,8 +2052,6 @@ networks:
 ```
 
 
-
-
 <img width="1080" height="919" alt="image" src="https://github.com/user-attachments/assets/77d5f2d3-cb52-4a6a-8e5b-e55fa79452b3" />
 
 
@@ -2141,8 +2060,6 @@ networks:
 
 
 <img width="1161" height="230" alt="image" src="https://github.com/user-attachments/assets/b999ff30-5e9e-4229-bdc7-5a9c232758f6" />
-
-
 
 ---
 
@@ -2239,9 +2156,6 @@ master
 
 Öffne den **Keycloak Admin**-Tab.
 
-⚠ Falls nur ein leerer Bildschirm erscheint:
-→ Browser-Tab aktualisieren.
-
 ### Login-Daten
 
 **Username:**  
@@ -2261,24 +2175,12 @@ cat secrets/keycloak_admin_password.txt
 
 ---
 
-✅ Du hast Keycloak erfolgreich mit sicherem Credential-Management in deinen Docker-Compose-Stack integriert.
+✅ Hier habe ich  Keycloak erfolgreich mit sicherem Credential-Management in deinen Docker-Compose-Stack integriert.
 
-Im nächsten Schritt konfigurierst du einen **Backstage-Realm** und einen **OIDC-Client**.
-
-```
-```
+Im nächsten Schritt konfiguriere ich einen **Backstage-Realm** und einen **OIDC-Client**.
 
 
-
-```
-
-CODE COMPLET
-```
-
-
-
-
-
+# CODE COMPLET
 
 ```bash
 
@@ -2434,17 +2336,28 @@ root@patrickaboudou-backstage-keycloak-fmv:~/labs/developer-portal#
 ```
 
 
+„HTTPS required“
 
-Das Bild ist eindeutig: **Keycloak blockt den Zugriff über `http://95.217.210.206:8080`**, weil im **Master-Realm** standardmäßig **SSL required = “external”** aktiv ist.
+# Interpretation
+
+Bein der versucht der Bachstage anzugreifen  stelle ich fest: Zugriff unmöglisch weitl: „HTTPS required“
+
+**Keycloak blockt den Zugriff über `http://95.217.210.206:8080`**, weil im **Master-Realm** standardmäßig **SSL required = “external”** aktiv ist.
 Heißt: **HTTP ist nur für localhost erlaubt**, aber **für externe Hosts verlangt Keycloak HTTPS** → deshalb „HTTPS required“.
 
-Du hast 3 saubere Wege. Nimm **Option A (empfohlen)**, dann hast du sofort Zugriff ohne Config-Hacks.
+# Lösung
+
+Zum lösung solche Probleme gibt  3 saubere Wege. Wir setzen diesen Wege als Option.
+
+**Option A (empfohlen)**, dann hat man sofort Zugriff ohne Config-Hacks.
+**Option B (empfohlen)**
+**Option C (empfohlen)**
 
 ---
 
 ## Option A (empfohlen): SSH Port-Forward → Zugriff über localhost (funktioniert immer)
 
-Auf **deinem Laptop/PC** (nicht im Server-Terminal) ausführen:
+Auf **meinem Laptop/PC** (nicht im Server-Terminal) ausführen:
 
 ```bash
 ssh -L 8080:localhost:8080 root@95.217.210.206
@@ -2457,47 +2370,23 @@ Dann im Browser auf deinem Laptop:
 Login:
 
 * User: `admin`
-* Passwort bekommst du auf dem Server mit:
+* Passwort bekomme ich auf dem Server mit:
 
   ```bash
   cat /root/labs/developer-portal/secrets/keycloak_admin_password.txt
   ```
 
-✅ Vorteil: Keine Änderungen an Keycloak nötig, kein HTTPS-Zwang, sofort nutzbar.
-
 ---
 
-## Option B: Plattform-Tab “Keycloak Admin” benutzen (falls vorhanden)
 
-Dein Lab erwähnt explizit einen **Keycloak Admin Tab**. Der läuft meist über einen HTTPS-Reverse-Proxy der Plattform.
-
-* Klick **Keycloak Admin**
-* Wenn blank: **Refresh**
-
-✅ Vorteil: Kein SSH nötig.
-Wenn du aber trotzdem „HTTPS required“ bekommst, dann nutzt die Plattform nicht korrekt den Proxy-Header → dann Option A oder C.
-
----
-
-## Option C (Lab-only Fix): SSL-Requirement im Master-Realm auf NONE setzen
-
-Wenn du unbedingt über `http://95.217.210.206:8080` zugreifen willst (nur fürs Lab ok), dann stellst du `sslRequired` im Realm um.
-
-### C.1 In den Keycloak-Container rein
-
-```bash
-cd /root/labs/developer-portal
-docker exec -it keycloak-backstage bash
-```
-
-### C.2 Admin-Passwort aus der Secret-Datei lesen (im Container)
+### A.2 Admin-Passwort aus der Secret-Datei lesen (im Container)
 
 ```bash
 export KC_PW="$(tr -d '[:space:]' < /secrets/keycloak_admin_password)"
 echo "$KC_PW" | wc -c
 ```
 
-### C.3 Mit kcadm anmelden
+### A.3 Mit kcadm anmelden
 
 ```bash
 /opt/keycloak/bin/kcadm.sh config credentials \
@@ -2507,13 +2396,13 @@ echo "$KC_PW" | wc -c
   --password "$KC_PW"
 ```
 
-### C.4 SSL Required im Master-Realm deaktivieren
+### A.4 SSL Required im Master-Realm deaktivieren
 
 ```bash
 /opt/keycloak/bin/kcadm.sh update realms/master -s sslRequired=NONE
 ```
 
-### C.5 Container verlassen
+### A.5 Container verlassen
 
 ```bash
 exit
@@ -2522,8 +2411,6 @@ exit
 Jetzt sollte im Browser gehen:
 
 * `http://95.217.210.206:8080/admin/`
-
-⚠️ Hinweis: Das ist **unsicher** (für Lab ok), in Produktion macht man das NICHT so.
 
 ---
 
@@ -2618,12 +2505,7 @@ root@patrickaboudou-backstage-keycloak-fmv:~/labs/developer-portal#
 <img width="1682" height="891" alt="image" src="https://github.com/user-attachments/assets/88b39c41-1644-4da7-b2db-6009090a2b88" />
 
 
-
-
-
 <img width="1693" height="1078" alt="image" src="https://github.com/user-attachments/assets/f246aa7c-881a-4436-9f11-774c9a584cb0" />
-
-
 
 
 
@@ -2640,28 +2522,15 @@ root@patrickaboudou-backstage-keycloak-fmv:~/labs/developer-portal#
 
 
 
-
-## Was du mir kurz sagen sollst
-
-Willst du **Option A (SSH Port-Forward)** oder **Option C (Realm SSL lockern)**?
-
-Wenn du “A” sagst, gebe ich dir den **exakten** SSH-Befehl passend zu deinem Setup (User/IP/Key), damit du direkt einloggen kannst.
-
-
-
-
-Alles klar: Das, was du da hast (**admin / keycloak-admin-1234**) sind **Keycloak Admin Credentials**, **nicht** das **root SSH Passwort**.
-
-Du findest diese Daten genau hier auf der Lab-Maschine:
-
-## 1) Wo ist das Passwort gespeichert?
+## 1) Wo ist mein Passwort gespeichert  ?
 
 In einer Datei im Projektordner:
 
 **Pfad:**
+
 `/root/labs/developer-portal/secrets/keycloak_admin_password.txt`
 
-## 2) Wie zeigst du es an (genau der Befehl)?
+## 2) genau der Befehl?
 
 ```bash
 cd /root/labs/developer-portal
@@ -2678,7 +2547,7 @@ Das geht **nur**, wenn du die Keycloak Admin Console öffnen kannst, z. B.:
 
 * über den **Keycloak Admin Tab** in der Plattform (empfohlen), oder
 * über Port-Forward `http://localhost:8080/admin/`, oder
-* wenn HTTP extern erlaubt wäre: `http://95.217.210.206:8080/admin/` (bei dir aktuell blockiert wegen HTTPS required).
+* wenn HTTP extern erlaubt wäre: `http://95.217.210.206:8080/admin/` 
 
 Login dann:
 
@@ -2686,20 +2555,6 @@ Login dann:
 * **Password:** `keycloak-admin-1234`
 
 ---
-
-## 4) Wichtig: Das hilft dir NICHT für `ssh root@95.217...`
-
-Für SSH brauchst du **root-Passwort** oder SSH-Key.
-Das Keycloak-Passwort ist dafür komplett unabhängig.
-
----
-
-### Sag mir kurz, was du erreichen willst:
-
-A) **Nur Keycloak Admin UI öffnen** → dann nehmen wir Option C (sslRequired=NONE) oder Plattform-Tab.
-B) **SSH Port-Forward von Windows machen** → dann brauchst du root SSH Passwort/Key; das steht an anderer Stelle (Plattform “SSH credentials”).
-
-Wenn du A willst, schreibe “A” — ich gebe dir sofort die Befehle, um HTTPS-Zwang zu deaktivieren (Lab-only) und du kannst direkt mit `admin/keycloak-admin-1234` einloggen.
 
 
 <img width="1099" height="236" alt="image" src="https://github.com/user-attachments/assets/f6abec78-a864-4a50-933b-59e81fba144a" />
@@ -2710,19 +2565,7 @@ Wenn du A willst, schreibe “A” — ich gebe dir sofort die Befehle, um HTTPS
 
 
 
-Perfekt ✅ Das ist **genau** das Keycloak-Admin-Passwort.
-
-* **Keycloak Username:** `admin`
-* **Keycloak Password:** `keycloak-admin-1234`
-* Datei liegt hier: `/root/labs/developer-portal/secrets/keycloak_admin_password.txt`
-
-Jetzt ist der einzige Blocker: Du bekommst im Browser „**HTTPS required**“, wenn du direkt auf `http://95.217.210.206:8080` gehst.
-
-Da du **kein root-SSH Passwort** für Port-Forwarding hast, machen wir die **Lab-Option C**: Keycloak so konfigurieren, dass HTTP von außen geht.
-
----
-
-# Fix: „HTTPS required“ deaktivieren (nur fürs Lab)
+# Lösung
 
 ## 1) In den Keycloak Container gehen
 
@@ -2761,10 +2604,6 @@ exit
 
 ---
 
-
-
-
-
 # Danach: Admin Console öffnen & einloggen
 
 Öffne im Browser:
@@ -2794,23 +2633,11 @@ Wenn die Seite leer ist: **Refresh**.
 <img width="1648" height="1009" alt="image" src="https://github.com/user-attachments/assets/b670c60f-acb5-4580-82cc-476ef860cd4b" />
 
 
+==================================================
+
 # Backstage Realm und OIDC-Client konfigurieren
+====================================================
 
-
-<img width="1712" height="862" alt="image" src="https://github.com/user-attachments/assets/2f0ac81a-eb9c-4303-bdb2-3efc9bcd844b" />
-
-
-<img width="1813" height="881" alt="image" src="https://github.com/user-attachments/assets/d8cdab60-80b4-4917-aa77-6bba33c5a3fb" />
-
-<img width="1353" height="973" alt="image" src="https://github.com/user-attachments/assets/25def60d-3922-420b-ad75-f2b48328fe42" />
-
-
-<img width="1373" height="878" alt="image" src="https://github.com/user-attachments/assets/aba1f719-aa43-4d91-9c80-7bee37eb5df6" />
-
-
-<img width="1279" height="987" alt="image" src="https://github.com/user-attachments/assets/2649bfed-0e87-4370-a494-970d74aa4409" />
-
-<img width="1441" height="938" alt="image" src="https://github.com/user-attachments/assets/6dfde3ca-cf07-47a9-814c-1bd8e2eb46e7" />
 
 
 
@@ -3273,24 +3100,6 @@ curl -s "$KEYCLOAK_URL/realms/$REALM/.well-known/openid-configuration" | head
 ---
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Ergebnis
 
  erfolgreich konfiguriert:
@@ -3299,6 +3108,33 @@ curl -s "$KEYCLOAK_URL/realms/$REALM/.well-known/openid-configuration" | head
 * Einen OIDC-Client für sichere Authentifizierung
 * Korrekte Redirect-URIs mit öffentlicher URL
 * Einen Group Mapper zur Übergabe von Gruppenmitgliedschaften
+
+
+
+<img width="1712" height="862" alt="image" src="https://github.com/user-attachments/assets/2f0ac81a-eb9c-4303-bdb2-3efc9bcd844b" />
+
+
+<img width="1813" height="881" alt="image" src="https://github.com/user-attachments/assets/d8cdab60-80b4-4917-aa77-6bba33c5a3fb" />
+
+<img width="1353" height="973" alt="image" src="https://github.com/user-attachments/assets/25def60d-3922-420b-ad75-f2b48328fe42" />
+
+
+<img width="1373" height="878" alt="image" src="https://github.com/user-attachments/assets/aba1f719-aa43-4d91-9c80-7bee37eb5df6" />
+
+
+<img width="1279" height="987" alt="image" src="https://github.com/user-attachments/assets/2649bfed-0e87-4370-a494-970d74aa4409" />
+
+<img width="1441" height="938" alt="image" src="https://github.com/user-attachments/assets/6dfde3ca-cf07-47a9-814c-1bd8e2eb46e7" />
+
+
+
+
+
+
+
+
+
+
 
 Backstage verfügt nun über eine eigene Authentifizierungsdomäne, die sowohl Benutzeridentität als auch Gruppeninformationen im Token bereitstellt.
 
@@ -3365,6 +3201,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
