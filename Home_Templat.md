@@ -2360,7 +2360,7 @@ root@patrickaboudou-backstage-keycloak-fmv:~/labs/developer-portal#
 
 # Interpretation
 
-Bein der versucht der Bachstage anzugreifen  stelle ich fest: Zugriff unmöglisch weitl: „HTTPS required“
+Bein der versucht der Bachstage anzugreifen  stelle ich fest: Zugriff unmöglisch weil: „HTTPS required“
 
 **Keycloak blockt den Zugriff über `http://95.217.210.206:8080`**, weil im **Master-Realm** standardmäßig **SSL required = “external”** aktiv ist.
 Heißt: **HTTP ist nur für localhost erlaubt**, aber **für externe Hosts verlangt Keycloak HTTPS** → deshalb „HTTPS required“.
@@ -3171,6 +3171,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
