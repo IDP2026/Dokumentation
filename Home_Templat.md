@@ -129,17 +129,24 @@ Die folgenden Technologien und Tools wurden im Projekt eingesetzt:
 
 ---
 
-# 1️⃣ Zielarchitektur – Internal Developer Platform (Production View)
+# 1️⃣ Zielarchitektur – Internal Developer Platform
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AUbMV4oMJmpArll4WJfltiQ.png)
 
+**Zielarchitektur (2)
+
 ![Image](https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/internal-developer-platform-diagram.webp)
+
+**Zielarchitektur (3)
 
 ![Image](https://d2908q01vomqb2.cloudfront.net/fe2ef495a1152561572949784c16bf23abb28057/2021/10/14/GitOpsEKS-1.jpg)
 
+**Zielarchitektur (4)
+
 ![Image](https://www.infracloud.io/assets/img/uploads/2019/12/argocd_architecture.png)
 
-### Architektur-Überblick
+
+# Architektur-Überblick
 
 **User Layer**
 
@@ -183,7 +190,7 @@ Die folgenden Technologien und Tools wurden im Projekt eingesetzt:
 
 ---
 
-# 2️⃣ Technische Integrationsarchitektur (Flow-Diagramm Erklärung)
+# 2️⃣ Technische Integrationsarchitektur
 
 ## End-to-End Self-Service Workflow
 
@@ -215,11 +222,19 @@ Die folgenden Technologien und Tools wurden im Projekt eingesetzt:
 
 ![Image](https://cdn.thenewstack.io/media/2024/11/344ba615-platform-journey-map-2.png)
 
+**Roadmap (1)
+
 ![Image](https://backstage.io/assets/images/package-architecture.drawio-15aac8979d89a6c2f7eb24f04d8d3b32.svg)
 
+**Roadmap (2)
 ![Image](https://media2.dev.to/dynamic/image/width%3D1280%2Cheight%3D720%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4oxdwy8cxkrbi9hnuwm2.png)
 
+
+
+# Stages of Platform DevOps Maturity
+
 ![Image](https://opencredo.com/assets/images/66bcbeed055d7275d5bf7c87_AD_4nXcUNpvE41OXGXClhW-MzDPMVnkgMBH8GZGKXgUvMqDEqJmGMFlMuncsyNTS4agn_yua9N96UysrIN64N9JaN4FHimtUNwduuVIAb8iwa5dmhvtnojEtV40STCbD9WXgwdPbainkOFD1wM3cztAmnp5BattO.png)
+
 
 ## 🔹 Phase 1 – Foundation
 
@@ -275,13 +290,20 @@ Sie ermöglicht:
 
 ---
 
-# 🏗 Internal Developer Platform – Kubernetes-basierte Zielarchitektur
+# Internal Developer Platform – Kubernetes-basierte Zielarchitektur
 
+**Architektur (1)
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1200/1%2AHIshxnsx-mnOPjVqPDnB_w.png)
+
+**Architektur (2)
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AUsoRh3pKIEzO-fmOZrKcZA.png)
 
+**Architektur (3)
+
 ![Image](https://miro.medium.com/1%2AcTriV-5n67K_IVBvdn-dHg.png)
+
+**Architektur (4)
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A743/1%2AyWazZNylMUHEbwPt1pyzGw.webp)
 
@@ -416,13 +438,19 @@ Eine **reine Kubernetes-basierte Internal Developer Platform mit GitOps**.
 
 ---
 
-# 🏗 Final Architecture – Internal Developer Platform 
+# Final Architecture – Internal Developer Platform 
 
+**Architektur (1)
 ![Image](https://miro.medium.com/1%2Apvo0SXZfqVEl_J-60-g4cg.gif)
 
+**Architektur (2)
+
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1200/1%2AHIshxnsx-mnOPjVqPDnB_w.png)
+**Architektur (3)
 
 ![Image](https://raw.githubusercontent.com/StarpTech/k8s-gitops/main/workflow-v11.png)
+
+**Architektur (4)
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AcoMYqPTL2LKeit2tgwndRg.png)
 
@@ -3143,6 +3171,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
