@@ -2956,7 +2956,6 @@ curl -s "$KEYCLOAK_URL/realms/$REALM/.well-known/openid-configuration" | head
 
 ---
 
-# Step 6: Redirect URIs im Keycloak Client setzen (exakt mit meinen URLs)
 
 ## 1) Keycloak Admin Console öffnen
 
@@ -2980,7 +2979,7 @@ Login:
 <img width="1395" height="1224" alt="image" src="https://github.com/user-attachments/assets/d07097a1-2e43-4c9f-88d7-9f8ba695c5c9" />
 
 
-### Root URL
+### Root
 
 ```
 https://backstage-app-patrickaboudou-yahoo-fr-backstage-keycloak.academy.tekanaid.com
@@ -3028,6 +3027,9 @@ Dann diese Einstellungen:
 
 ---
 
+# Ergebnisse:
+
+
 <img width="1673" height="1195" alt="image" src="https://github.com/user-attachments/assets/1ac866d6-60fa-4fa8-9418-3f055c8b0c7a" />
 
 
@@ -3035,7 +3037,12 @@ Dann diese Einstellungen:
 <img width="1657" height="997" alt="image" src="https://github.com/user-attachments/assets/027f11a4-d482-40a6-af17-cd7b73137129" />
 
 
+<img width="1373" height="878" alt="image" src="https://github.com/user-attachments/assets/aba1f719-aa43-4d91-9c80-7bee37eb5df6" />
 
+
+<img width="1279" height="987" alt="image" src="https://github.com/user-attachments/assets/2649bfed-0e87-4370-a494-970d74aa4409" />
+
+<img width="1441" height="938" alt="image" src="https://github.com/user-attachments/assets/6dfde3ca-cf07-47a9-814c-1bd8e2eb46e7" />
 
 ## Mini-Check
 
@@ -3067,12 +3074,6 @@ curl -s "$KEYCLOAK_URL/realms/$REALM/.well-known/openid-configuration" | head
 <img width="1353" height="973" alt="image" src="https://github.com/user-attachments/assets/25def60d-3922-420b-ad75-f2b48328fe42" />
 
 
-<img width="1373" height="878" alt="image" src="https://github.com/user-attachments/assets/aba1f719-aa43-4d91-9c80-7bee37eb5df6" />
-
-
-<img width="1279" height="987" alt="image" src="https://github.com/user-attachments/assets/2649bfed-0e87-4370-a494-970d74aa4409" />
-
-<img width="1441" height="938" alt="image" src="https://github.com/user-attachments/assets/6dfde3ca-cf07-47a9-814c-1bd8e2eb46e7" />
 
 ```
 ```
@@ -3142,6 +3143,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
