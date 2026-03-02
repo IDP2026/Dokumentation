@@ -2657,19 +2657,16 @@ Wenn die Seite leer ist: **Refresh**.
 
 
 
-==================================================
-
+===============================================
 # Backstage-Realm erstellen
-====================================================
+===============================================
 
 
 
 
 =============================================
-
 # Backstage Realm und OIDC-Client konfigurieren
-
-===================================================
+============================================
 
 
 
@@ -2732,8 +2729,8 @@ Die Struktur von Keycloak verstehen:
 <img width="1724" height="1169" alt="image" src="https://github.com/user-attachments/assets/046d7e29-c5ba-4f50-8883-78c453cd8c57" />
 
 
-======================================================
-======================================================
+=====================
+=====================
 
 
 ```html
@@ -3171,6 +3168,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
