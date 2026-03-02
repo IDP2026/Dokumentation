@@ -2102,7 +2102,6 @@ docker compose logs -f keycloak
 ```
 <img width="1539" height="962" alt="image" src="https://github.com/user-attachments/assets/84f04ac7-5817-489d-b7d8-ad1963297a2c" />
 
-Warte auf folgende Meldung:
 
 ```
 Keycloak 24.0.x on JVM (powered by Quarkus) started in XX.XXXs. 
@@ -2481,23 +2480,22 @@ root@patrickaboudou-backstage-keycloak-fmv:~/labs/developer-portal#
 
 
 
-
-<img width="1632" height="860" alt="image" src="https://github.com/user-attachments/assets/b39a8dfe-3679-47ec-b9e6-8ae526c2500e" />
-
+<img width="1202" height="827" alt="image" src="https://github.com/user-attachments/assets/0aae8e51-524f-4424-a796-35f08c239c4e" />
 
 
 
-<img width="1702" height="842" alt="image" src="https://github.com/user-attachments/assets/5f5a140b-a8e8-4594-a3b5-dc12d89f9d9e" />
+<img width="1538" height="821" alt="image" src="https://github.com/user-attachments/assets/b50f0d4b-f128-42b6-b058-077bccc5822a" />
+
+
+<img width="1318" height="1023" alt="image" src="https://github.com/user-attachments/assets/287ddfdf-32bb-4544-b143-899ab5a23cd4" />
 
 
 
-<img width="1589" height="1194" alt="image" src="https://github.com/user-attachments/assets/67151b5b-7d93-41ed-a917-f140951664c0" />
+<img width="1648" height="1009" alt="image" src="https://github.com/user-attachments/assets/b670c60f-acb5-4580-82cc-476ef860cd4b" />
 
 
-<img width="1710" height="945" alt="image" src="https://github.com/user-attachments/assets/3808ce9c-7d20-4a7d-85f0-f0afa2a37512" />
 
 
-<img width="1682" height="891" alt="image" src="https://github.com/user-attachments/assets/88b39c41-1644-4da7-b2db-6009090a2b88" />
 
 
 <img width="1693" height="1078" alt="image" src="https://github.com/user-attachments/assets/f246aa7c-881a-4436-9f11-774c9a584cb0" />
@@ -2614,23 +2612,28 @@ Wenn die Seite leer ist: **Refresh**.
 
 ---
 
-<img width="1202" height="827" alt="image" src="https://github.com/user-attachments/assets/0aae8e51-524f-4424-a796-35f08c239c4e" />
+
+
+<img width="1702" height="842" alt="image" src="https://github.com/user-attachments/assets/5f5a140b-a8e8-4594-a3b5-dc12d89f9d9e" />
 
 
 
-<img width="1538" height="821" alt="image" src="https://github.com/user-attachments/assets/b50f0d4b-f128-42b6-b058-077bccc5822a" />
+<img width="1589" height="1194" alt="image" src="https://github.com/user-attachments/assets/67151b5b-7d93-41ed-a917-f140951664c0" />
 
 
-<img width="1318" height="1023" alt="image" src="https://github.com/user-attachments/assets/287ddfdf-32bb-4544-b143-899ab5a23cd4" />
+<img width="1710" height="945" alt="image" src="https://github.com/user-attachments/assets/3808ce9c-7d20-4a7d-85f0-f0afa2a37512" />
+
+
+<img width="1682" height="891" alt="image" src="https://github.com/user-attachments/assets/88b39c41-1644-4da7-b2db-6009090a2b88" />
 
 
 
-<img width="1648" height="1009" alt="image" src="https://github.com/user-attachments/assets/b670c60f-acb5-4580-82cc-476ef860cd4b" />
+
 
 
 ==================================================
 
-# Backstage Realm und OIDC-Client konfigurieren
+# Backstage-Realm erstellen
 ====================================================
 
 
@@ -3142,6 +3145,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
