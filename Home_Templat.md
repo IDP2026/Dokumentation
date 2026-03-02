@@ -3074,17 +3074,10 @@ curl -s "$KEYCLOAK_URL/realms/$REALM/.well-known/openid-configuration" | head
 
 <img width="1441" height="938" alt="image" src="https://github.com/user-attachments/assets/6dfde3ca-cf07-47a9-814c-1bd8e2eb46e7" />
 
+```
+```
 
-
-
-
-
-
-
-
-
-
-Backstage verfügt nun über eine eigene Authentifizierungsdomäne, die sowohl Benutzeridentität als auch Gruppeninformationen im Token bereitstellt.
+Mein Backstage verfügt nun über eine eigene Authentifizierungsdomäne, die sowohl Benutzeridentität als auch Gruppeninformationen im Token bereitstellt.
 
 ```
 ```
@@ -3149,6 +3142,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
