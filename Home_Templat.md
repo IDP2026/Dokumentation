@@ -272,7 +272,7 @@ Sie ermöglicht:
 ---
 
 
-# **klar und spezifisch Architektur für ein Kubernetes-Cluster**
+# **Spezifisch Architektur für ein Kubernetes-Cluster**
 
 ---
 
@@ -288,7 +288,7 @@ Sie ermöglicht:
 
 ---
 
-## 🔷 1️⃣ Architektur Layer (Spezifisch für dein Projekt)
+## 🔷 1️⃣ Architektur Layer
 
 ### 👤 User Layer
 
@@ -417,7 +417,7 @@ Eine **reine Kubernetes-basierte Internal Developer Platform mit GitOps**.
 
 ---
 
-# 🏗 Final Architecture – Internal Developer Platform (Cluster-Scoped Setup)
+# 🏗 Final Architecture – Internal Developer Platform 
 
 ![Image](https://miro.medium.com/1%2Apvo0SXZfqVEl_J-60-g4cg.gif)
 
@@ -429,7 +429,7 @@ Eine **reine Kubernetes-basierte Internal Developer Platform mit GitOps**.
 
 ---
 
-# 🔷 1️⃣ High-Level Architecture (Cluster-intern)
+# 🔷 1️⃣ High-Level Architecture
 
 ## 👤 Users
 
@@ -441,8 +441,6 @@ Developers & Platform Engineers
 
 * Backstage (Deployment im Namespace `platform`)
 * Argo CD (Namespace `argocd`)
-
-Beide laufen **im gleichen Kubernetes-Cluster**, logisch getrennt über Namespaces.
 
 ---
 
@@ -707,9 +705,7 @@ Man kann sich Templates als „Baupläne“ oder „Cookiecutter“-Werkzeuge vo
 ==========================================
 ---
 
-## Schritt 1: Verzeichnisstruktur für das Template erstellen
 
-Erstellen Sie zunächst die grundlegende Struktur für Ihr Template. Im Terminal-Tab:
 
 ```bash
 cd /root/labs/developer-portal
@@ -776,12 +772,10 @@ spec:
   type: service
   # Parameters, steps, and output will be added in subsequent tasks
 ```
-
-Speichern Sie diese Datei als
+Als Datei speichern
 
 `/root/labs/developer-portal/templates/nodejs-service-template/template.yaml`.
 
-Wie mache ich das?
 
 ```bash
 yamllint template.yaml
@@ -932,10 +926,8 @@ Dann prüfen:
 cat template.yaml
 ```
 
-Fertig.
 
-
-So machst du **Step 4: Template Documentation** sauber und ohne Fehler – genau in deinem Ordner-Setup (`docs/` existiert schon).
+**Step 4: Template Documentation** 
 
 ## Ziel
 
@@ -959,28 +951,6 @@ Du solltest sowas sehen:
 * `docs`
 * `skeleton`
 * `template.yaml`
-
-Wenn du im falschen Ordner bist, geh in deinen Template-Ordner:
-
-```bash
-cd /root/labs/developer-portal/templates/nodejs-service-template
-```
-
----
-
-## 2) README im docs-Verzeichnis erstellen/bearbeiten
-
-Öffne die Datei mit nano (sie wird erstellt, falls sie noch nicht existiert):
-
-```bash
-nano docs/README.md
-```
-
----
-
-## 3) Inhalt einfügen (genau so)
-
-Kopiere **alles** hier rein:
 
 ```md
 # Node.js Microservice Template
@@ -3395,6 +3365,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
