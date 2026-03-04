@@ -3031,7 +3031,7 @@ Dann **Save**.
 
 ---
 
-# Step 7: Group Mapper hinzufügen (Token Claim „groups“)
+# Step 7-1: Group Mapper hinzufügen (Token Claim „groups“)
 
 Pfad:
 **Clients → backstage → Client scopes → backstage-dedicated → Add mapper → By configuration → Group Membership**
@@ -3166,6 +3166,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
