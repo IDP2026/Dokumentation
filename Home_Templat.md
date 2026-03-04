@@ -2965,7 +2965,7 @@ Dann **Save**.
 
 ---
 
-# Schnelle Verifikation (damit du sicher bist, dass OIDC stimmt)
+# Schnelle Verifikation (damit ich sicher bin, dass OIDC stimmt)
 
 ## A) OIDC Discovery Endpoint prüfen (Keycloak)
 
@@ -3166,6 +3166,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
