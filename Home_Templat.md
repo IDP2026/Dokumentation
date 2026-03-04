@@ -3008,7 +3008,7 @@ Login:
 https://backstage-app-patrickaboudou-yahoo-fr-backstage-keycloak.academy.tekanaid.com
 ```
 
-### Valid redirect URIs  (BEIDE hinzufügen!)
+### Valid redirect URIs
 
 ```
 https://backstage-app-patrickaboudou-yahoo-fr-backstage-keycloak.academy.tekanaid.com/api/auth/oidc/handler/frame
@@ -3166,6 +3166,7 @@ Dieses Projekt wurde von **Koffitse Aboudou** im Rahmen des Masterarbeit an der 
 
 
 **Hinweis**: Dieser Abschnitt der Arbeit stellt nur einen Teil des Gesamtprojekts dar. Das vollständige Projekt ist Eigentum des Unternehmens und daher nicht öffentlich zugänglich. Es handelt sich um ein Projekt, bei dem lediglich ein Teil veröffentlicht wird.
+
 
 
 
