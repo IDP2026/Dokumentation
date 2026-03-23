@@ -562,35 +562,11 @@ Backstage:
 * Least-Privilege GitHub Actions Permissions
 * Multi-Stage Docker Builds
 * Git = Single Source of Truth
-
----
-
-# 🧠 Warum diese Architektur sauber ist
-
-* Plattform-Komponenten laufen getrennt von Business-Workloads
-* GitOps sorgt für deterministische Deployments
-* Kein zusätzlicher Infra-Provisioning Layer → reduziert Komplexität
-* Skalierbar durch Namespace-Strategie
-* Voll kompatibel mit CBA-Prüfungsinhalten
-
----
-
- Jetzt eine dieser 3 professionellen Varianten erstellen:
-
-### 🔹 Option A – C4 Architecture (für Architektur-Review geeignet)
-
-### 🔹 Option B – Management Executive Slide (1 Seite, sehr clean)
-
-### 🔹 Option C – Technisches Deep-Dive Diagramm mit Netzwerk-Ports & RBAC
-
-
-
 ---
 
 ===========================================
 # Schritt 1: Überprüfen, ob Backstage läuft
 ===========================================
-
 
 ```bash
 systemctl status backstage
